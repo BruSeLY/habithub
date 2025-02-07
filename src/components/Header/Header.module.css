@@ -1,0 +1,136 @@
+.header {
+  background: rgba(10, 5, 28, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.header__content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #8e2de2, #4a00e0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+.nav__links {
+  display: flex;
+  gap: 2rem;
+  margin-left: 2rem;
+}
+
+.nav__link {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.nav__link:hover {
+  color: white;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  transition: width 0.3s ease;
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+.active {
+  color: white !important;
+}
+
+.active::after {
+  width: 100% !important;
+}
+
+.user__panel {
+  gap: 1.5rem;
+}
+
+.avatar {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.login__button {
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.login__button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(106, 17, 203, 0.4);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+  
+  .nav__links {
+    gap: 1rem;
+    margin-left: 1rem;
+  }
+  
+  .header__logo {
+    font-size: 1.25rem;
+  }
+  
+  .user__panel {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav__links {
+    display: none;
+  }
+  
+  .header__logo span {
+    display: none;
+  }
+}
+
+.modalContent {
+  min-width: 500px;
+  min-height: 400px;
+  position: relative;
+}
+
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 107, 107, 0.1);
+}
