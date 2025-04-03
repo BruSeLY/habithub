@@ -11,7 +11,7 @@ const StartPage = () => {
       <div className={styles.content__wrapper}>
         <div className={styles.badge}>
           <IconRocket size={18} />
-          <span>Шишин Даниил 11А</span>
+          <span>Совершенствуйтесь</span>
         </div>
 
         <h1 className={styles.title}>
